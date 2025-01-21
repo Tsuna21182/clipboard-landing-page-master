@@ -1,0 +1,346 @@
+:root {
+  /* Primary */
+
+  --StrongCyan: hsl(171, 66%, 44%);
+  --LightBlue: hsl(233, 100%, 69%);
+
+  /* Neutral */
+
+  --DarkGrayishBlue: hsl(210, 10%, 33%);
+  --GrayishBlue: hsl(201, 11%, 66%);
+
+  --fuente-principal: "Bai Jamjuree", serif;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 1.8rem;
+  font-family: var(--fuente-principal);
+  line-height: 1.5;
+  background-image: url(/images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--DarkGrayishBlue);
+}
+img {
+  max-width: 100%;
+}
+[class*="contenedor"] {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 85%;
+}
+
+[class*="heading"] {
+  font-size: 3rem;
+}
+
+[class*="text"] {
+  font-weight: 200;
+  font-size: 1.6rem;
+}
+
+/* header */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 5rem;
+
+  img {
+    width: 40%;
+  }
+}
+
+/* btn */
+
+.header__btn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.btn {
+  padding: 2rem 5rem;
+  border-radius: 3rem;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.ios {
+  background-color: var(--StrongCyan);
+}
+
+.mac {
+  background-color: var(--LightBlue);
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 4px #000;
+}
+
+/* snippets */
+
+.snippets {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* hero */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero__contenido {
+  margin-top: 3rem;
+}
+
+.articulo__heading {
+  margin-bottom: 0;
+}
+
+.articulo__text {
+  margin-top: 0;
+}
+
+/* clipboard */
+
+.clipboard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* workflow */
+
+.workflow {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.workflow__heading {
+  margin-bottom: 0;
+}
+
+.workflow__items {
+  margin-top: 4rem;
+}
+
+.item {
+  margin-top: 4rem;
+}
+
+.item__heading {
+  margin-bottom: 0;
+}
+
+/* marcas */
+
+.marcas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  gap: 4rem;
+
+  img {
+    width: 40%;
+  }
+}
+
+/* download */
+
+.download {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.download__text {
+  margin-top: 0;
+}
+
+/* footer */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 5rem;
+  gap: 4rem;
+
+  img {
+    width: 20%;
+  }
+}
+
+.footer__navegacion {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.navegacion__link {
+  text-decoration: none;
+  color: var(--GrayishBlue);
+  font-weight: 800;
+  transition: all 0.3s ease-in-out;
+}
+
+.navegacion__link:hover {
+  color: var(--StrongCyan);
+}
+
+.footer__redes {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.footer__redes img {
+  transition: all 0.3s ease-in-out;
+  filter: grayscale(100%);
+}
+
+.footer__redes img:hover {
+  filter: grayscale(0%) brightness(0) saturate(100%) invert(52%) sepia(83%)
+    saturate(551%) hue-rotate(133deg) brightness(93%) contrast(86%);
+
+  cursor: pointer;
+}
+
+/* media queries */
+
+@media (min-width: 1440px) {
+  .header {
+    align-items: center;
+    text-align: center;
+    img {
+      width: 10%;
+    }
+  }
+
+  [class*="heading"] {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  [class*="text"] {
+    margin-top: 0;
+    font-size: 2rem;
+  }
+
+  .header__btn {
+    flex-direction: row;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    margin-top: 5rem;
+  }
+
+  .hero__contenido {
+    text-align: left;
+  }
+
+  .articulo__heading {
+    font-size: 3rem;
+  }
+
+  .articulo__text {
+    font-size: 2rem;
+  }
+
+  .clipboard {
+    margin-top: 10rem;
+  }
+
+  .workflow__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  .item {
+    img {
+      width: 15%;
+    }
+  }
+
+  .item__heading {
+    font-size: 3rem;
+  }
+
+  .item__text {
+    font-size: 2rem;
+  }
+
+  .marcas {
+    flex-direction: row;
+    justify-content: center;
+
+    img {
+      width: 10%;
+    }
+  }
+
+  .download {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15rem;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+
+    img {
+      width: 5%;
+    }
+  }
+
+  .footer__navegacion {
+    flex-direction: row;
+    gap: 10rem;
+    justify-content: space-evenly;
+  }
+
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  .footer__redes {
+    img {
+      width: 30%;
+    }
+  }
+}
