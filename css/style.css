@@ -215,6 +215,7 @@ img {
 .nav__links {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 
 .footer__redes {
